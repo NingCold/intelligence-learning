@@ -85,5 +85,3 @@ todo
 计算机视觉
 
 todo
-
-I love play valorant
