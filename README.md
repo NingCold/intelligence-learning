@@ -84,6 +84,4 @@ todo
 
 计算机视觉
 
-todo
-
-i love playing valorant
+蓬勃小可爱
