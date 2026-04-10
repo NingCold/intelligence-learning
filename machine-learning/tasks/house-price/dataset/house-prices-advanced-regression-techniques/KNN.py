@@ -104,6 +104,12 @@ test_df = clean_test(test_df, drop_cols)#测试集
 
 #3.==================KNN算法模型预测=====================
 
+'''
+KNN算法原理:（KNN是一种有监督的机器学习方法）
+KNN算法分为分类和回归算法，分类用于处理标签为非数字的数据，回归用于处理标签为数字的数据。
+KNN预测的原理是计算预测样本值与测试集每个样本间的欧式距离之和，选出距离最小的k个样本，根据这些样本的标签来进行预测。
+'''
+
 #合并训练集（去掉房价）+ 测试集,为了后面统一文字转数字
 all_data = pd.concat([train_df.drop('SalePrice', axis=1), test_df], axis=0)
 
@@ -135,6 +141,7 @@ X_train = scaler.fit_transform(X_train)  # 训练集
 X_test = scaler.transform(X_test)        # 测试集
 
 # ======================KNN模型训练 + 预测======================
+
 #利用KNN回归模型
 # 创建KNN模型，找 5 个最近的数字
 knn = KNeighborsRegressor(n_neighbors=5)
